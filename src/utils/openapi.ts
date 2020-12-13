@@ -34,16 +34,10 @@ export function getStatusCodeType(statusCode: string | number, defaultAsError = 
     code *= 100; // parseInt('2xx') parses to 2
   }
 
-  if (code < 100 || code > 599) {
-    throw new Error('invalid HTTP code');
-  }
+  
   let res = 'success';
-  if (code >= 300 && code < 400) {
-    res = 'redirect';
-  } else if (code >= 400) {
+  if (code != 200) {
     res = 'error';
-  } else if (code < 200) {
-    res = 'info';
   }
   return res;
 }

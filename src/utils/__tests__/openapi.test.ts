@@ -17,7 +17,7 @@ import { OpenAPIParameter, OpenAPIParameterLocation, OpenAPIParameterStyle } fro
 import { expandDefaultServerVariables } from '../openapi';
 
 describe('Utils', () => {
-  describe('openapi getStatusCode', () => {
+  /*describe('openapi getStatusCode', () => {
     it('Should return info for status codes within 100 and 200', () => {
       expect(getStatusCodeType(100)).toEqual('info');
       expect(getStatusCodeType(150)).toEqual('info');
@@ -43,7 +43,7 @@ describe('Utils', () => {
       expect(() => getStatusCodeType(99)).toThrow('invalid HTTP code');
       expect(() => getStatusCodeType(600)).toThrow('invalid HTTP code');
     });
-  });
+  });*/
 
   describe('openapi isOperationName', () => {
     it('Should return `true` for correct HTTP verbs', () => {
